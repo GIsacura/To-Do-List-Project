@@ -30,8 +30,8 @@ function App() {
     setSearchValue
   } = useTodos();
   return (
-      <React.Fragment>
-      <TodoHeader>
+    <React.Fragment>
+      <TodoHeader loading = {loading}>
         <TodoCounter
             totalTodos={totalTodos}
             completedTodos={completedTodos}
