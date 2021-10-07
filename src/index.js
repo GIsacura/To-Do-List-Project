@@ -1,29 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './App/index.js';
+import App from './App/index.js';
 import './index.css';
 
-function App(props){
-  return(
-    <h1>¡{props.saludo}, {props.nombre}!</h1>
-  )
-}
-
-function withWhatever(WrappedComponent){
-  return function ComponenteDeVerdad(props){
-    return (
-      <React.Fragment>
-        <WrappedComponent {...props}/>
-        <p>Estamos acompañando al wrapped compenent</p>
-      </React.Fragment>
-    )
-  }
-}
-
-const AppWithWhatever = withWhatever(App)
 
 ReactDOM.render(
-  <AppWithWhatever saludo = "Hey" nombre = "Juanita"/>,
-  // <App saludo="Buenas" nombre="Nath"/>,
+  <App/>,
   document.getElementById('root')
 );
